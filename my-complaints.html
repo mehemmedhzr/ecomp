@@ -1,26 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<link rel="stylesheet" href="style.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <title>Complaint</title>
 
-<body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Boxicons CDN Link -->
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css"
+    />
+    <link rel="stylesheet" href="sidebar1.css" />
+    <link rel="stylesheet" href="complaint.css" />
+  </head>
+
+  <body>
     <div class="sidebar">
-        <div class="logo-details">
-          <div class="logo_name">İKTA</div>
-          <i class="bx bx-menu" id="btn"></i>
-        </div>
-        <ul class="nav-list">
-          <li class="menu-item">
-            <a href="#">
-              <i class="bx bx-home"></i>
-              <span class="links_name">Əsas səhifə</span>
-            </a>
-            <span class="tooltip">Əsas səhifə</span>
-            <!-- <ul class="submenu">
+      <div class="logo-details">
+        <div class="logo_name">İKTA</div>
+        <i class="bx bx-menu" id="btn"></i>
+      </div>
+      <ul class="nav-list">
+        <li class="menu-item">
+          <a href="#">
+            <i class="bx bx-home"></i>
+            <span class="links_name">Əsas səhifə</span>
+          </a>
+          <span class="tooltip">Əsas səhifə</span>
+          <!-- <ul class="submenu">
               <li>
                 <a href="#">Submenu Item 1</a>
                 <span class="tooltip">Submenu Item 1</span>
@@ -30,14 +43,14 @@
                 <span class="tooltip">Submenu Item 2</span>
               </li>
             </ul> -->
-          </li>
-          <li class="menu-item">
-            <a href="#">
-              <i class="bx bx-message-alt-edit"></i>
-              <span class="links_name">Şikayətə keçid</span>
-            </a>
-            <span class="tooltip">Şikayətə keçid</span>
-            <!-- <ul class="submenu">
+        </li>
+        <li class="menu-item">
+          <a href="complaint.html">
+            <i class="bx bx-message-alt-edit"></i>
+            <span class="links_name">Şikayətə keçid</span>
+          </a>
+          <span class="tooltip">Şikayətə keçid</span>
+          <!-- <ul class="submenu">
               <li>
                 <a href="#">Submenu user 1</a>
                 <span class="tooltip">Submenu user 1</span>
@@ -47,14 +60,14 @@
                 <span class="tooltip">user Item 2</span>
               </li>
             </ul> -->
-          </li>
-          <li class="menu-item">
-            <a href="#">
-              <i class="bx bx-list-ul"></i>
-              <span class="links_name">Şikayətlərim</span>
-            </a>
-            <span class="tooltip">Şikayətlərim</span>
-            <!-- <ul class="submenu">
+        </li>
+        <li class="menu-item">
+          <a href="my-complaints.html">
+            <i class="bx bx-list-ul"></i>
+            <span class="links_name">Şikayətlərim</span>
+          </a>
+          <span class="tooltip">Şikayətlərim</span>
+          <!-- <ul class="submenu">
               <li>
                 <a href="#">Submenu user 1</a>
                 <span class="tooltip">Submenu user 1</span>
@@ -64,20 +77,68 @@
                 <span class="tooltip">user Item 2</span>
               </li>
             </ul> -->
-          </li>
-  
-          <li class="profile">
-            <!-- <div class="profile-details">
+        </li>
+
+        <li class="profile">
+          <!-- <div class="profile-details">
               <img src="profile.jpg" alt="profileImg" />
               <div class="name_job">
                 <div class="name">Prem Shahi</div>
                 <div class="job">Web designer</div>
               </div>
             </div> -->
-            <i class="bx bx-log-out" id="log_out"></i>
-          </li>
-        </ul>
+          <i class="bx bx-log-out" id="log_out"></i>
+        </li>
+      </ul>
+    </div>
+    <div class="home-section">
+      <div class="complaints-title">
+        <span>Şikayətlərim</span>
       </div>
-    
-</body>
+      <div class="tableContainer">
+        <table id="complaints-table" class="display accountTable" style="width:100%">
+            <thead>
+                <tr>
+                    <th>Şikayətçi adı</th>
+                    <th>Müraciətin mövzusu</th>
+                    <th>Müraciətin tarixi</th>
+                    <th>Müraciətin status</th>                
+                </tr>
+
+            </thead>
+        </table>
+    </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+    <script src="script.js"></script>
+    <script type="text/javascript">
+           $(document).ready(function() {
+            $.getJSON("/data.json", function(data) {
+                $('#complaints-table').DataTable({
+                    "paging": false,
+                    "data": data,
+                    "columns": [                    
+                        {
+                            "data": "complainer"
+                        },
+                        {
+                            "data": "subject"
+                        },
+                        {
+                            "data": "date"
+                        },
+                        {
+                            "data": "status"
+                        },
+                   
+                    ]
+                });
+                $('.dataTables_filter input').attr('placeholder', 'Axtar...');
+                $('.dataTables_filter label').contents().first().replaceWith('');
+            })
+        });
+    </script>
+  </body>
 </html>

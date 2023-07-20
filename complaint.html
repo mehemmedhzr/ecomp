@@ -4,6 +4,8 @@
   <head>
     <meta charset="UTF-8" />
     <title>Complaint</title>
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="sidebar1.css" />
     <link rel="stylesheet" href="complaint.css" />
     <!-- Boxicons CDN Link -->
@@ -11,7 +13,6 @@
       href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
       rel="stylesheet"
     />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body>
     <div class="sidebar">
@@ -38,7 +39,7 @@
           </ul> -->
         </li>
         <li class="menu-item">
-          <a href="#">
+          <a href="complaint.html">
             <i class="bx bx-message-alt-edit"></i>
             <span class="links_name">Şikayətə keçid</span>
           </a>
@@ -55,7 +56,7 @@
           </ul> -->
         </li>
         <li class="menu-item">
-          <a href="#">
+          <a href="my-complaints.html">
             <i class="bx bx-list-ul"></i>
             <span class="links_name">Şikayətlərim</span>
           </a>
@@ -84,68 +85,67 @@
         </li>
       </ul>
     </div>
-      <div class="home-section">
-        <div class="complaint-content">
-          <div class="complaint-header">Şikayət məlumatları</div>
+    <div class="home-section">
+      <div class="complaint-content">
+        <div class="complaint-header">Şikayət məlumatları</div>
 
-          <form action="" class="complaint-form">
-            <div class="form-element">
-              <label for="">Firmanın fəaliyyət sahəsini seçin</label>
-              <select id="" name="">
-                <option value="">Firmanın fəaliyyət sahəsi</option>
-                <option value="">Sahə 1</option>
-                <option value="">Sahə 2</option>
-                <option value="">Sahə 3</option>
-              </select>
-            </div>
+        <form action="" class="complaint-form">
+          <div class="form-element">
+            <label for="">Firmanın fəaliyyət sahəsini seçin</label>
+            <select id="" name="">
+              <option value="">Firmanın fəaliyyət sahəsi</option>
+              <option value="">Sahə 1</option>
+              <option value="">Sahə 2</option>
+              <option value="">Sahə 3</option>
+            </select>
+          </div>
 
-            <div class="form-element">
-              <label for="">Şikayətçi olduğunuz müəssisə</label>
-              <select id="" name="">
-                <option value="">Müəssisə</option>
-                <option value="">Müəssisə 1</option>
-                <option value="">Müəssisə 2</option>
-                <option value="">Müəssisə 3</option>
-              </select>
-            </div>
+          <div class="form-element">
+            <label for="">Şikayətçi olduğunuz müəssisə</label>
+            <select id="" name="">
+              <option value="">Müəssisə</option>
+              <option value="">Müəssisə 1</option>
+              <option value="">Müəssisə 2</option>
+              <option value="">Müəssisə 3</option>
+            </select>
+          </div>
 
-            <div class="form-element">
-              <label for="">Şikayət mövzunuzu seçin</label>
-              <select id="" name="">
-                <option value="">Şikayət Mövzusu</option>
-                <option value="">Mövzu 1</option>
-                <option value="">Mövzu 2</option>
-                <option value="">Mövzu 3</option>
-              </select>
-            </div>
+          <div class="form-element">
+            <label for="">Şikayət mövzunuzu seçin</label>
+            <select id="" name="">
+              <option value="">Şikayət Mövzusu</option>
+              <option value="">Mövzu 1</option>
+              <option value="">Mövzu 2</option>
+              <option value="">Mövzu 3</option>
+            </select>
+          </div>
 
-            <div class="form-element">
-              <label for="">Şikayət mətni</label>
-              <textarea
-                name=""
-                id=""
-                cols="30"
-                rows="10"
-                placeholder="Maksimum 2000 simvol"
-                maxlength="2000"
-              ></textarea>
-            </div>
+          <div class="form-element">
+            <label for="">Şikayət mətni</label>
+            <textarea
+              name=""
+              id=""
+              cols="30"
+              rows="10"
+              placeholder="Maksimum 2000 simvol"
+              maxlength="2000"
+            ></textarea>
+          </div>
 
-            <div class="file-upload form-element">
-              <input type="file" id="file-upload" class="upload-input" />
-              <label for="file-upload" id="upload-label" class="upload-label"
-                ><i class="bx bxs-file-blank"></i>Fayl əlavə et</label
-              >
-            </div>
+          <div class="file-upload form-element">
+            <input type="file" id="file-upload" class="upload-input" />
+            <label for="file-upload" id="upload-label" class="upload-label"
+              ><i class="bx bxs-file-blank"></i>Fayl əlavə et</label
+            >
+          </div>
 
-            <button type="submit">
-              <i class="bx bx-check"></i>Şikayət yarat
-            </button>
-            <button type="reset"><i class="bx bx-x"></i>İmtina et</button>
-          </form>
-        </div>
+          <button type="submit">
+            <i class="bx bx-check"></i>Şikayət yarat
+          </button>
+          <button type="reset"><i class="bx bx-x"></i>İmtina et</button>
+        </form>
       </div>
-   
+    </div>
 
     <script src="script.js"></script>
   </body>

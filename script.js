@@ -51,9 +51,9 @@ menuItems.forEach((menuItem) => {
 
 // Remake input[type:file]
 
-document.getElementById('file-upload').addEventListener('change', function(e) {
-  var fileName = e.target.files[0] ? e.target.files[0].name : "Fayl seçilməyib!";
-  document.getElementById('upload-label').textContent = fileName;
-});
+// document.getElementById('file-upload').addEventListener('change', function(e) {
+//   var fileName = e.target.files[0] ? e.target.files[0].name : "Fayl seçilməyib!";
+//   document.getElementById('upload-label').textContent = fileName;
+// });
 
 
