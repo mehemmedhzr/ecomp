@@ -1,59 +1,30 @@
-let sidebar = document.querySelector(".sidebar");
-let closeBtn = document.querySelector("#btn");
-let searchBtn = document.querySelector(".bx-search");
-const menuItems = document.querySelectorAll(".menu-item");
+//Choosing where to complain
 
-closeBtn.addEventListener("click", () => {
-  sidebar.classList.toggle("open");
-  menuBtnChange(); //calling the function(optional)
-  if (!sidebar.classList.contains("open")) {
-    menuItems.forEach((menuItem) => {
-      menuItem.classList.remove("active");
-    });
-  }
-});
+let newComplaintSide = document.querySelector('.directNewComplaint');
 
-// searchBtn.addEventListener("click", () => {
-//   // Sidebar open when you click on the search iocn
-//   sidebar.classList.toggle("open");
-//   menuBtnChange(); //calling the function(optional)
-// });
+let newComplaintOption = document.querySelector('.complaintOption');
 
-// following are the code to change sidebar button(optional)
-function menuBtnChange() {
-  if (sidebar.classList.contains("open")) {
-    closeBtn.classList.replace("bx-menu", "bx-menu-alt-right"); //replacing the iocns class
-  } else {
-    closeBtn.classList.replace("bx-menu-alt-right", "bx-menu"); //replacing the iocns class
-  }
-}
+let complaintOptionBox = document.querySelector('.complaintOption>div');
 
-// Use JavaScript to add an event listener to the Dashboard item
-// Select all the menu items
+  //Open the option box
+  newComplaintSide.addEventListener('click', function () {
+    newComplaintOption.style.display = 'flex';
+  })
 
-// Loop through all the menu items
-menuItems.forEach((menuItem) => {
-  // Add a click event listener to each menu item
-  menuItem.addEventListener("click", function () {
-    // Toggle the "active" class on the clicked menu item
-    this.classList.toggle("active");
-
-    // Get the submenu of the clicked menu item
-    let submenu = this.querySelector(".submenu");
-
-    // If the submenu exists
-    if (submenu) {
-      // Toggle the "active" class on the submenu
-      submenu.classList.toggle("active");
+  //Close the option box
+  newComplaintOption.addEventListener('click', function(e) {
+    if(e.target != complaintOptionBox){
+      this.style.display = 'none';
     }
-  });
+  })
+
+
+
+
+
+document.getElementById('file-upload').addEventListener('change', function(e) {
+  var fileName = e.target.files[0] ? e.target.files[0].name : "Fayl seçilməyib!";
+  document.getElementById('upload-label').textContent = fileName;
 });
-
-// Remake input[type:file]
-
-// document.getElementById('file-upload').addEventListener('change', function(e) {
-//   var fileName = e.target.files[0] ? e.target.files[0].name : "Fayl seçilməyib!";
-//   document.getElementById('upload-label').textContent = fileName;
-// });
 
 

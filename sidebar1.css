@@ -246,7 +246,6 @@
   background: none;
 }
 .home-section {
-  padding: 20px;
   position: relative;
   background: #e4e9f7;
   min-height: 100vh;
@@ -301,3 +300,135 @@
 }
 
 /* SIDEBAR SECTION ENDS */
+
+/* WRITE A COMPLAINT STARTS */
+
+.home-section .complaint-content {
+  padding: 20px;
+
+  border-radius: 4px 0 0 0;
+  height: 100%;
+}
+
+.home-section .complaint-header {
+  margin-bottom: 28px;
+  font-size: 28px;
+}
+
+.home-section .complaint-form .form-element {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+}
+
+.home-section .complaint-form .form-element > label {
+  margin-bottom: 8px;
+}
+
+.home-section .complaint-form .form-element > textarea {
+  padding: 15px;
+  border: none;
+  border-radius: 0px;
+  background-color: #fbfbfb;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  resize: none;
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+.home-section .complaint-form .form-element > select {
+  padding: 15px;
+  border: none;
+  border-radius: 0px;
+  color: #60666d;
+  background-color: #fbfbfb;
+  font-size: 16px;
+  /* box-shadow: 0 15px 30px -10px transparentize(#000, 0.9); */
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  cursor: pointer;
+  &:focus-visible {
+    outline: none;
+  }
+  > option {
+    padding: 15px;
+    border: none;
+    border-radius: 0px;
+    &:hover {
+      background-color: #fff;
+    }
+  }
+}
+
+.home-section .upload-input {
+  display: none;
+}
+
+.home-section .upload-label {
+  padding: 10px;
+  background-color: #11101d;
+  max-width: 150px;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: all 0.2s ease;
+  > i {
+    margin-right: 4px;
+  }
+  &:hover {
+    background-color: #fff;
+    color: #11101d;
+    border-color: #11101d;
+  }
+}
+
+.home-section .file-name {
+  margin-left: 10px;
+}
+
+.home-section .complaint-form button[type="submit"] {
+  border-radius: 4px;
+  padding: 8px;
+  border: 1px solid #11101d;
+  background-color: #fff;
+  color: #11101d;
+  /* width: 110px; */
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  > i {
+    margin-right: 4px;
+  }
+  &:hover {
+    background-color: #11101d;
+    color: #fff;
+  }
+}
+
+.home-section .complaint-form button[type="reset"] {
+  border-radius: 4px;
+  padding: 8px;
+  border: 1px solid #11101d;
+  background-color: #11101d;
+  color: #fff;
+  /* width: 110px; */
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  > i {
+    margin-right: 4px;
+  }
+  &:hover {
+    background-color: #fff;
+    color: #11101d;
+    /* border-color: #11101d; */
+  }
+}
+/* WRITE A COMPLAINT ENDS */
