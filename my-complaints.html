@@ -17,7 +17,8 @@
       href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css"
     />
     <link rel="stylesheet" href="sidebar1.css" />
-    <link rel="stylesheet" href="complaint.css" />
+    <link rel="stylesheet" href="my-complaints.css" />
+    <!-- <link rel="stylesheet" href="complaint.css" /> -->
   </head>
 
   <body>
@@ -106,7 +107,7 @@
               <th>Şikayətçi adı</th>
               <th>Müraciətin mövzusu</th>
               <th>Müraciətin tarixi</th>
-              <th>Müraciətin status</th>
+              <th class="status">Müraciətin status</th>
             </tr>
           </thead>
         </table>
@@ -115,7 +116,7 @@
 
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
-    <script src="script.js"></script>
+    <!-- <script src="script.js"></script> -->
     <script type="text/javascript">
       $(document).ready(function () {
         $.getJSON("/data.json", function (data) {
@@ -134,6 +135,13 @@
               },
               {
                 data: "status",
+                render: function (data, type, row, meta) {
+                  if (type === "display") {
+                    data =
+                      '<i class="bx bx-envelope-open bx-tada"></i> ';
+                  }
+                  return data;
+                },
               },
             ],
           });
@@ -142,5 +150,7 @@
         });
       });
     </script>
+    <script src="/sidebar.js"></script>
+    <!-- <link rel="stylesheet" href="/script.js"> -->
   </body>
 </html>

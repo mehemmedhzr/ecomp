@@ -3,13 +3,13 @@
         "complainer":"complainer1",
         "subject":"subject1",
         "date":"date1",
-        "status":"status1"
+        "status":""
     },
     {
         "complainer":"complainer2",
         "subject":"subject2",
         "date":"date2",
-        "status":"status2"
+        "status":""
     },
     {
         "complainer":"complainer3",

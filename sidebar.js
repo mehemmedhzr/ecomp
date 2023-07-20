@@ -3,6 +3,8 @@ let closeBtn = document.querySelector("#btn");
 let searchBtn = document.querySelector(".bx-search");
 const menuItems = document.querySelectorAll(".menu-item");
 
+
+console.log(closeBtn);
 closeBtn.addEventListener("click", () => {
   sidebar.classList.toggle("open");
   menuBtnChange(); //calling the function(optional)

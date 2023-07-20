@@ -1,0 +1,20 @@
+#complaints-table tr,
+#complaints-table td {
+  background: white;
+}
+
+#complaints-table .status {
+  width: 90px !important;
+}
+
+#complaints-table td {
+  text-align: center;
+  font-weight: bold;
+  border: none;
+  background: #d4d6da;
+  border-bottom: 1px solid gray;
+}
+
+#complaints-table i{
+    font-size: 26px;
+}
