@@ -3,7 +3,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8" />
-    <title>Responsive Sidebar Menu HTML CSS | CodingNepal</title>
+    <title>Complaint</title>
     <link rel="stylesheet" href="style.css" />
     <!-- Boxicons CDN Link -->
     <link
@@ -12,9 +12,6 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
-  <style>
-   
-  </style>
   <body>
     <div class="sidebar">
       <div class="logo-details">
@@ -22,11 +19,9 @@
         <i class="bx bx-menu" id="btn"></i>
       </div>
       <ul class="nav-list">
-    
-
         <li class="menu-item">
-          <a href="index.html">
-            <i class='bx bx-home'></i>
+          <a href="#">
+            <i class="bx bx-home"></i>
             <span class="links_name">Əsas səhifə</span>
           </a>
           <span class="tooltip">Əsas səhifə</span>
@@ -43,7 +38,7 @@
         </li>
         <li class="menu-item">
           <a href="#">
-            <i class='bx bx-message-alt-edit'></i>
+            <i class="bx bx-message-alt-edit"></i>
             <span class="links_name">Şikayətə keçid</span>
           </a>
           <span class="tooltip">Şikayətə keçid</span>
@@ -60,7 +55,7 @@
         </li>
         <li class="menu-item">
           <a href="#">
-            <i class='bx bx-list-ul' ></i>
+            <i class="bx bx-list-ul"></i>
             <span class="links_name">Şikayətlərim</span>
           </a>
           <span class="tooltip">Şikayətlərim</span>
@@ -75,7 +70,7 @@
             </li>
           </ul> -->
         </li>
-       
+
         <li class="profile">
           <!-- <div class="profile-details">
             <img src="profile.jpg" alt="profileImg" />
@@ -88,61 +83,69 @@
         </li>
       </ul>
     </div>
-    <div class="home-section">
-      <div class="text">E-Complaint</div>
-      <div class="complaint-content">
-        <div class="complaint-header">Şikayət məlumatları</div>
+      <div class="home-section">
+        <div class="complaint-content">
+          <div class="complaint-header">Şikayət məlumatları</div>
 
-        <form action="" class="complaint-form">
+          <form action="" class="complaint-form">
             <div class="form-element">
-                <label for="">Firmanın fəaliyyət sahəsini seçin</label>
-                <select id="" name="">
-                    <option value="">Firmanın fəaliyyət sahəsi</option>
-                    <option value="">Sahə 1</option>
-                    <option value="">Sahə 2</option>
-                    <option value="">Sahə 3</option>
-                </select>
-            </div>      
-
-            <div class="form-element">
-                <label for="">Şikayətçi olduğunuz müəssisə</label>
-                <select id="" name="">
-                    <option value="">Müəssisə</option>
-                    <option value="">Müəssisə 1</option>
-                    <option value="">Müəssisə 2</option>
-                    <option value="">Müəssisə 3</option>
-                </select>
+              <label for="">Firmanın fəaliyyət sahəsini seçin</label>
+              <select id="" name="">
+                <option value="">Firmanın fəaliyyət sahəsi</option>
+                <option value="">Sahə 1</option>
+                <option value="">Sahə 2</option>
+                <option value="">Sahə 3</option>
+              </select>
             </div>
 
             <div class="form-element">
-                <label for="">Şikayət mövzunuzu seçin</label>
-                <select id="" name="">
-                    <option value="">Şikayət Mövzusu</option>
-                    <option value="">Mövzu 1</option>
-                    <option value="">Mövzu 2</option>
-                    <option value="">Mövzu 3</option>
-                </select>
+              <label for="">Şikayətçi olduğunuz müəssisə</label>
+              <select id="" name="">
+                <option value="">Müəssisə</option>
+                <option value="">Müəssisə 1</option>
+                <option value="">Müəssisə 2</option>
+                <option value="">Müəssisə 3</option>
+              </select>
             </div>
 
             <div class="form-element">
-                <label for="">Şikayət mətni</label>
-                <textarea name="" id="" cols="30" rows="10" placeholder="Maksimum 2000 simvol" maxlength="2000"></textarea>
+              <label for="">Şikayət mövzunuzu seçin</label>
+              <select id="" name="">
+                <option value="">Şikayət Mövzusu</option>
+                <option value="">Mövzu 1</option>
+                <option value="">Mövzu 2</option>
+                <option value="">Mövzu 3</option>
+              </select>
+            </div>
+
+            <div class="form-element">
+              <label for="">Şikayət mətni</label>
+              <textarea
+                name=""
+                id=""
+                cols="30"
+                rows="10"
+                placeholder="Maksimum 2000 simvol"
+                maxlength="2000"
+              ></textarea>
             </div>
 
             <div class="file-upload form-element">
-                <input type="file" id="file-upload" class="upload-input">
-                <label for="file-upload" id="upload-label" class="upload-label"><i class='bx bxs-file-blank'></i>Fayl əlavə et</label>
+              <input type="file" id="file-upload" class="upload-input" />
+              <label for="file-upload" id="upload-label" class="upload-label"
+                ><i class="bx bxs-file-blank"></i>Fayl əlavə et</label
+              >
             </div>
 
-            <button type="submit"><i class='bx bx-check'></i>Şikayət yarat</button>
-            <button type="reset"><i class='bx bx-x'></i>İmtina et</button>
-
-              
-        </form>
+            <button type="submit">
+              <i class="bx bx-check"></i>Şikayət yarat
+            </button>
+            <button type="reset"><i class="bx bx-x"></i>İmtina et</button>
+          </form>
+        </div>
       </div>
-    </div>
+   
 
-  
     <script src="script.js"></script>
   </body>
 </html>
