@@ -28,7 +28,7 @@
       </div>
       <ul class="nav-list">
         <li class="menu-item">
-          <a href="#">
+          <a href="index.html">
             <i class="bx bx-home"></i>
             <span class="links_name">Əsas səhifə</span>
           </a>
@@ -96,49 +96,51 @@
         <span>Şikayətlərim</span>
       </div>
       <div class="tableContainer">
-        <table id="complaints-table" class="display accountTable" style="width:100%">
-            <thead>
-                <tr>
-                    <th>Şikayətçi adı</th>
-                    <th>Müraciətin mövzusu</th>
-                    <th>Müraciətin tarixi</th>
-                    <th>Müraciətin status</th>                
-                </tr>
-
-            </thead>
+        <table
+          id="complaints-table"
+          class="display accountTable"
+          style="width: 100%"
+        >
+          <thead>
+            <tr>
+              <th>Şikayətçi adı</th>
+              <th>Müraciətin mövzusu</th>
+              <th>Müraciətin tarixi</th>
+              <th>Müraciətin status</th>
+            </tr>
+          </thead>
         </table>
-    </div>
+      </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
     <script src="script.js"></script>
     <script type="text/javascript">
-           $(document).ready(function() {
-            $.getJSON("/data.json", function(data) {
-                $('#complaints-table').DataTable({
-                    "paging": false,
-                    "data": data,
-                    "columns": [                    
-                        {
-                            "data": "complainer"
-                        },
-                        {
-                            "data": "subject"
-                        },
-                        {
-                            "data": "date"
-                        },
-                        {
-                            "data": "status"
-                        },
-                   
-                    ]
-                });
-                $('.dataTables_filter input').attr('placeholder', 'Axtar...');
-                $('.dataTables_filter label').contents().first().replaceWith('');
-            })
+      $(document).ready(function () {
+        $.getJSON("/data.json", function (data) {
+          $("#complaints-table").DataTable({
+            paging: false,
+            data: data,
+            columns: [
+              {
+                data: "complainer",
+              },
+              {
+                data: "subject",
+              },
+              {
+                data: "date",
+              },
+              {
+                data: "status",
+              },
+            ],
+          });
+          $(".dataTables_filter input").attr("placeholder", "Axtar...");
+          $(".dataTables_filter label").contents().first().replaceWith("");
         });
+      });
     </script>
   </body>
 </html>
